@@ -49,6 +49,6 @@ export class App {
   }
 
   onOrder(): void {
-    window.open('https://wa.me/77000000000', '_blank');
+    window.open('t.me/aiaspan_bot', '_blank');
   }
 }
