@@ -1,0 +1,91 @@
+<main class="mobile-wrapper">
+  
+  <!-- 1. Hero Секция с дроном -->
+  <section class="hero-block">
+    <div class="hero-diagonal-bg"></div>
+    <div class="drone-container">
+      <img src="/drone.png" alt="Aspan AI Drone" class="drone-photo" />
+    </div>
+    <div class="hero-content">
+      <h1 class="brand-name">ASPAN AI</h1>
+      <p class="brand-tagline">Алаңсыз орта — жарқын мереке</p>
+    </div>
+  </section>
+
+  <!-- 2. Бесконечная лента мероприятий -->
+  <section class="events-block">
+    <div class="events-header-bar">
+      <h2>Қандай іс-шарамен көмектесе аламыз?</h2>
+    </div>
+
+    <div class="slider-viewport">
+      <div class="slider-track">
+        <!-- Оригинальный набор -->
+        <article class="event-slide" *ngFor="let item of events">
+          <div class="slide-thumb">
+            <img [src]="item.img" [alt]="item.title" loading="lazy" />
+          </div>
+          <span class="slide-label">{{ item.title }}</span>
+        </article>
+
+        <!-- Повторный набор для бесшовной плавной прокрутки -->
+        <article class="event-slide" *ngFor="let item of events">
+          <div class="slide-thumb">
+            <img [src]="item.img" [alt]="item.title" loading="lazy" />
+          </div>
+          <span class="slide-label">{{ item.title }}</span>
+        </article>
+      </div>
+    </div>
+
+    <!-- Кнопка заказа -->
+    <div class="order-btn-box">
+      <button class="order-btn" (click)="onOrder()">Тапсырыс беру</button>
+    </div>
+  </section>
+
+  <!-- 3. Неге бізді таңдайды? -->
+  <section class="advantages-block">
+    <h2 class="advantages-title">Неге бізді таңдайды ?</h2>
+
+    <div class="advantages-grid">
+      <div class="adv-card" *ngFor="let adv of advantages">
+        <img [src]="adv.img" [alt]="adv.title" class="adv-bg-img" />
+        <div class="adv-gradient">
+          <span class="adv-text">{{ adv.title }}</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Карта и YouTube видео -->
+  <section class="media-block">
+    <!-- Карта -->
+    <div class="map-box">
+      <iframe 
+        [src]="mapUrl" 
+        width="100%" 
+        height="230" 
+        style="border:0;" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+      <p class="map-title">Біздің мекенжайымыз</p>
+    </div>
+
+    <!-- Заголовок видео -->
+    <h2 class="video-heading">Қолданылатын<br>технология</h2>
+
+    <!-- YouTube Iframe 16:9 -->
+    <div class="youtube-frame-wrapper">
+      <iframe 
+        [src]="youtubeUrl" 
+        title="Visual Intelligence Summit by Roboflow" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allowfullscreen>
+      </iframe>
+    </div>
+  </section>
+
+</main>

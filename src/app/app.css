@@ -1,0 +1,278 @@
+:host {
+  display: block;
+  background-color: #3f3f3f;
+  color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.mobile-wrapper {
+  max-width: 430px;
+  margin: 0 auto;
+  min-height: 100vh;
+  background-color: #4b4b4b;
+  overflow-x: hidden;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
+}
+
+/* ================= HERO ================= */
+.hero-block {
+  position: relative;
+  background-color: #ffffff;
+  padding-top: 25px;
+  overflow: hidden;
+}
+
+.hero-diagonal-bg {
+  position: absolute;
+  top: 95px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #4b4b4b;
+  clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 100%);
+  z-index: 1;
+}
+
+.drone-container {
+  position: relative;
+  z-index: 2;
+  width: 88%;
+  margin: 0 auto;
+}
+
+.drone-photo {
+  width: 100%;
+  display: block;
+  filter: drop-shadow(0 14px 18px rgba(0, 0, 0, 0.45));
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  margin-top: 8px;
+  padding-bottom: 24px;
+}
+
+.brand-name {
+  margin: 0;
+  font-size: 42px;
+  font-weight: 900;
+  font-style: italic;
+  letter-spacing: 1px;
+  color: #ffffff;
+  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
+}
+
+.brand-tagline {
+  margin: 6px 0 0 0;
+  font-size: 15px;
+  font-style: italic;
+  font-weight: 700;
+  color: #f1f5f9;
+}
+
+/* ================= КРУТЯЩАЯСЯ ЛЕНТА ================= */
+.events-block {
+  background-color: #4b4b4b;
+  padding-bottom: 30px;
+}
+
+.events-header-bar {
+  background-color: #ffffff;
+  padding: 10px 14px;
+  text-align: center;
+  margin-bottom: 22px;
+}
+
+.events-header-bar h2 {
+  color: #111827;
+  font-size: 16px;
+  font-weight: 900;
+  font-style: italic;
+  margin: 0;
+}
+
+.slider-viewport {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+}
+
+.slider-track {
+  display: flex;
+  gap: 14px;
+  width: max-content;
+  animation: scrollContinuous 18s linear infinite;
+}
+
+.slider-viewport:hover .slider-track {
+  animation-play-state: paused;
+}
+
+@keyframes scrollContinuous {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.event-slide {
+  flex: 0 0 160px;
+  display: flex;
+  flex-direction: column;
+}
+
+.slide-thumb {
+  width: 160px;
+  height: 180px;
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: #262626;
+}
+
+.slide-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.slide-label {
+  margin-top: 8px;
+  font-size: 13px;
+  font-style: italic;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.25;
+}
+
+.order-btn-box {
+  text-align: center;
+  margin-top: 32px;
+}
+
+.order-btn {
+  background-color: #ffffff;
+  color: #111827;
+  border: none;
+  font-size: 20px;
+  font-weight: 900;
+  font-style: italic;
+  padding: 14px 44px;
+  border-radius: 40px;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+  transition: transform 0.15s ease;
+}
+
+.order-btn:active {
+  transform: scale(0.96);
+}
+
+/* ================= ПРЕИМУЩЕСТВА ================= */
+.advantages-block {
+  background-color: #ffffff;
+  padding: 34px 18px 24px;
+  border-top-left-radius: 28px;
+  border-top-right-radius: 28px;
+}
+
+.advantages-title {
+  color: #000000;
+  font-size: 23px;
+  font-weight: 900;
+  font-style: italic;
+  text-align: center;
+  margin: 0 0 22px 0;
+}
+
+.advantages-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.adv-card {
+  position: relative;
+  width: 100%;
+  height: 160px;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.adv-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.adv-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 35%, rgba(0, 0, 0, 0.88) 100%);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 14px;
+}
+
+.adv-text {
+  color: #ffffff;
+  font-size: 19px;
+  font-weight: 900;
+  font-style: italic;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.9);
+}
+
+/* ================= КАРТА И ЮТУБ ================= */
+.media-block {
+  background-color: #4b4b4b;
+  padding: 26px 18px 50px;
+}
+
+.map-box {
+  background-color: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+.map-title {
+  color: #000000;
+  font-size: 15px;
+  font-weight: 900;
+  font-style: italic;
+  text-align: center;
+  margin: 10px 0 12px 0;
+}
+
+.video-heading {
+  font-size: 28px;
+  font-weight: 900;
+  font-style: italic;
+  line-height: 1.15;
+  margin: 32px 0 18px 0;
+  color: #ffffff;
+}
+
+.youtube-frame-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+  border-radius: 14px;
+  overflow: hidden;
+  background-color: #1e1e1e;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.youtube-frame-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
