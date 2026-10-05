@@ -49,6 +49,6 @@ export class App {
   }
 
   onOrder(): void {
-    window.open('t.me/aiaspan_bot', '_blank');
+    window.open('https://t.me/aiaspan_bot', '_blank');
   }
 }
